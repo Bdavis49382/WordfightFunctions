@@ -3,7 +3,6 @@
 # Deploy with `firebase deploy`
 
 from firebase_functions.options import set_global_options
-# from messages import addmessage, makeuppercase
 from game import create_game
 
 # The Firebase Admin SDK to access Cloud Firestore.
