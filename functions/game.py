@@ -26,7 +26,7 @@ def create_game(req: Request) -> Response:
     }
 
     # Push the new message into Cloud Firestore using the Firebase Admin SDK.
-    _, doc_ref = firestore_client.collection("messages").add(game)
+    _, doc_ref = firestore_client.collection("games").add(game)
     game['id'] = doc_ref
     # Send back the created game
     return Response(game.__str__())
