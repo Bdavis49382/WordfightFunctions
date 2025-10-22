@@ -19,9 +19,9 @@ def create_game(req: CallableRequest) -> dict:
         "blocks": build_grid(),
         "turn": user,
         "players": [user, opponent],
+        "scores": [0,0],
         "usedWords":[],
-        "blueScore":0,
-        "redScore":0,
+        "finished":False,
         "lastMove": SERVER_TIMESTAMP
     }
 
@@ -42,6 +42,6 @@ def build_grid()  -> list[dict[str]]:
             "letter":choice(die),
             "index":i,
             "allegiance":'none',
-            "clicked":False
+            "surrounded":False
         }
         for i,die in enumerate(base_dice)]

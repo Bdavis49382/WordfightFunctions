@@ -4,6 +4,7 @@
 
 from firebase_functions.options import set_global_options
 from game import create_game
+from words import submit_word
 
 # The Firebase Admin SDK to access Cloud Firestore.
 from firebase_admin import initialize_app
